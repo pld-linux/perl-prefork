@@ -4,8 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	prefork
-Summary:	prefork - Optimize module loading across forking and non-forking scenarios
-#Summary(pl):	
+Summary:	prefork - optimize module loading across forking and non-forking scenarios
+Summary(pl):	prefork - optymalizacja ³adowania modu³ów dla rozwidlonych i nierozwidlonych scenariuszy
 Name:		perl-prefork
 Version:	0.03
 Release:	1
@@ -21,12 +21,14 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The prefork pragma is intended to allow module writers to optimise module
-loading for B<both> scenarios with as little additional code as possible.
+The prefork pragma is intended to allow module writers to optimise
+module loading for both scenarios with as little additional code as
+possible.
 
-The prefork.pm is intended to serve as a central and optional marshalling
-point for state detection (are we running in procedural or pre-forking
-mode) and to act as a relatively light-weight module loader.
+The prefork.pm is intended to serve as a central and optional
+marshalling point for state detection (are we running in procedural or
+pre-forking mode) and to act as a relatively light-weight module
+loader.
 
 # %description -l pl
 # TODO
