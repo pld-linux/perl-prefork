@@ -30,8 +30,15 @@ marshalling point for state detection (are we running in procedural or
 pre-forking mode) and to act as a relatively light-weight module
 loader.
 
-# %description -l pl
-# TODO
+%description -l pl
+prefork ma umo¿liwiæ pisz±cym modu³y zoptymalizowanie ³adowania
+modu³ów dla obu scenariuszy przy u¿yciu jak najmniejszego dodatkowego
+kodu.
+
+prefork.pm ma s³u¿yæ jako centralny i opcjonalnie prowadz±cy punkt dla
+wykrywania stanów (czy program dzia³a w trybie proceduralnym, czy
+pre-fork) i dzia³aæ jako relatywnie lekki modu³ do wczytywania
+modu³ów.
 
 %prep
 %setup -q -n %{pdir}-%{version}
