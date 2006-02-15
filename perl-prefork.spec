@@ -7,16 +7,16 @@
 Summary:	prefork - optimize module loading across forking and non-forking scenarios
 Summary(pl):	prefork - optymalizacja ³adowania modu³ów dla rozwidlonych i nierozwidlonych scenariuszy
 Name:		perl-prefork
-Version:	0.04
-Release:	0.1
+Version:	1.00
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
-# Source0-md5:	23871c6aab90d5ce6990703aa1932589
+# Source0-md5:	41e19e56aca6ae7f36bcbfe420a0eb4c
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.24-2
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-ExtUtils-MakeMaker >= 6.24-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,6 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/prefork/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
