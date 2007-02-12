@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	prefork
 Summary:	prefork - optimize module loading across forking and non-forking scenarios
-Summary(pl):	prefork - optymalizacja ≥adowania modu≥Ûw dla rozwidlonych i nierozwidlonych scenariuszy
+Summary(pl.UTF-8):   prefork - optymalizacja ≈Çadowania modu≈Ç√≥w dla rozwidlonych i nierozwidlonych scenariuszy
 Name:		perl-prefork
 Version:	1.01
 Release:	1
@@ -30,15 +30,15 @@ marshalling point for state detection (are we running in procedural or
 pre-forking mode) and to act as a relatively light-weight module
 loader.
 
-%description -l pl
-prefork ma umoøliwiÊ pisz±cym modu≥y zoptymalizowanie ≥adowania
-modu≥Ûw dla obu scenariuszy przy uøyciu jak najmniejszego dodatkowego
+%description -l pl.UTF-8
+prefork ma umo≈ºliwiƒá piszƒÖcym modu≈Çy zoptymalizowanie ≈Çadowania
+modu≈Ç√≥w dla obu scenariuszy przy u≈ºyciu jak najmniejszego dodatkowego
 kodu.
 
-prefork.pm ma s≥uøyÊ jako centralny i opcjonalnie prowadz±cy punkt dla
-wykrywania stanÛw (czy program dzia≥a w trybie proceduralnym, czy
-pre-fork) i dzia≥aÊ jako relatywnie lekki modu≥ do wczytywania
-modu≥Ûw.
+prefork.pm ma s≈Çu≈ºyƒá jako centralny i opcjonalnie prowadzƒÖcy punkt dla
+wykrywania stan√≥w (czy program dzia≈Ça w trybie proceduralnym, czy
+pre-fork) i dzia≈Çaƒá jako relatywnie lekki modu≈Ç do wczytywania
+modu≈Ç√≥w.
 
 %prep
 %setup -q -n %{pdir}-%{version}
