@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	prefork
 Summary:	prefork - optimize module loading across forking and non-forking scenarios
-Summary(pl.UTF-8):   prefork - optymalizacja ładowania modułów dla rozwidlonych i nierozwidlonych scenariuszy
+Summary(pl.UTF-8):	prefork - optymalizacja ładowania modułów dla rozwidlonych i nierozwidlonych scenariuszy
 Name:		perl-prefork
 Version:	1.01
 Release:	1
