@@ -7,13 +7,13 @@
 Summary:	prefork - optimize module loading across forking and non-forking scenarios
 Summary(pl.UTF-8):	prefork - optymalizacja ładowania modułów dla rozwidlonych i nierozwidlonych scenariuszy
 Name:		perl-prefork
-Version:	1.01
+Version:	1.02
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
-# Source0-md5:	42413de51d691f82fe32d6eee0adede2
+# Source0-md5:	3dccdbbb32439aa07a8d87eb217f0011
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.24-2
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
