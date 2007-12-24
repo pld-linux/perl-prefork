@@ -14,6 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
 # Source0-md5:	3dccdbbb32439aa07a8d87eb217f0011
+URL:		http://search.cpan.org/dist/prefork/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.24-2
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
