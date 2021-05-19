@@ -6,17 +6,22 @@
 Summary:	prefork - optimize module loading across forking and non-forking scenarios
 Summary(pl.UTF-8):	prefork - optymalizacja ładowania modułów dla rozwidlonych i nierozwidlonych scenariuszy
 Name:		perl-prefork
-Version:	1.04
+Version:	1.05
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
-# Source0-md5:	47a514d4058ffc8cca184b28d6d54d0a
-URL:		http://search.cpan.org/dist/prefork/
+Source0:	http://www.cpan.org/modules/by-authors/id/E/ET/ETHER/%{pdir}-%{version}.tar.gz
+# Source0-md5:	60d97a66a1e6e4ccfa51f8662a511048
+URL:		https://metacpan.org/release/prefork
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.24-2
+%if %{with tests}
+BuildRequires:	perl-Scalar-List-Utils >= 0.18
+BuildRequires:	perl-Test-Simple
+%endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +49,7 @@ modułów.
 %setup -q -n %{pdir}-%{version}
 
 %build
-%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"%{pdir}")' \
+%{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
 
@@ -56,8 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/prefork/.packlist
+#rm -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
+#rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/prefork/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,5 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/prefork.pm
+%{_mandir}/man3/prefork.3pm*
